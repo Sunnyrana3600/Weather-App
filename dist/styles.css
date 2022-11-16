@@ -1,0 +1,134 @@
+/* General CSS  */
+:root{
+    --mg-background:#262626;
+    --mg-fontcolor:#cbd5e1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: var(--mg-background);
+    color:var(--mg-fontcolor)
+}
+html, body {
+    height:100%;
+}
+
+
+/*City Input Section */
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#city-input{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    margin-top: 1em;
+}
+
+
+/* Weather Display */
+
+.weather-information{
+    display: none;
+    
+}
+
+.weather-info-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.location-name{
+    font-size: 3rem;
+}
+
+.weather-condition{
+    display: flex;
+    gap:2em;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+img{
+    height: 8rem;
+    width: 8rem;
+}
+.tempatures{
+    display: flex;
+    gap: 3em;
+    font-size: 2rem;
+    width: 100%;
+    justify-content: center; 
+}
+
+/* Google API Customization */
+.pac-item-query{
+    color:var(--mg-fontcolor)
+}
+
+.pac-item:hover{
+    background-color: var(--mg-background);
+}
+
+/* Media Queries */
+@media(max-width:1441px){
+    #city-input{
+        margin-left: 5em;
+    }
+
+}
+@media(max-width: 600px){
+    #city-input{
+        margin-left: 3.5em;
+    }
+    .tempatures{
+        text-align: center;
+    }
+}
+
+@media(max-width:426px){
+    .tempatures{
+        gap:2em;
+    }
+    .weather-info-show{
+        margin-left: 5em;
+        
+    }
+
+}
+
+@media(max-width:396px){
+    .location-name{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:350px){
+    #city-input{
+        margin-left: 0;
+        width: 8em;
+        font-size: 2em;
+    }
+    .weather-info-show{
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    .location-name{
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+    .tempatures{
+        font-size: 1rem;
+    }
+
+}
